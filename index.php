@@ -1,3 +1,7 @@
+<?php
+require 'db.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,7 @@
 </head>
 <body>
     <h1>ПРОВЕРКА</h1>
+    <p><?php echo $i ?></p>
     <script src="script.js"></script>
 </body>
 </html>
