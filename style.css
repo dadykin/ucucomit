@@ -1,3 +1,8 @@
 h1 {
     background: red;
 }
+input, textarea{
+    display: block;
+    width: 30%;
+    margin-bottom: 10px;
+}
