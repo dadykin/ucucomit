@@ -7,4 +7,4 @@ $user->age = $_POST["age"];
 $user->work = $_POST["work"];
 $user->about = $_POST["about"];
 R::store($user);
-echo "сохранено";
+header('Location: index.php');

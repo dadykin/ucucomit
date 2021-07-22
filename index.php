@@ -1,5 +1,6 @@
 <?php
 require 'db.php';
+$people = R::findAll("users");
 
 ?>
 <!DOCTYPE html>
@@ -23,6 +24,16 @@ require 'db.php';
         <textarea name="about" cols="30" rows="10" placeholder="ОБЯЗАННОСТИ"></textarea>
         <button type="submit">отправить</button>
     </form>
+    <h2>Пользователи</h2>
+    <ul>
+        <?php
+            foreach($people as $item){
+echo "<li>$item->firstname</li>";
+
+            }
+
+        ?>
+    </ul>
         <script src="script.js"></script>
 </body>
 </html>
