@@ -22,7 +22,7 @@ $people = R::findAll("users");
         <input type="number" name="age" placeholder="ВОЗРАСТ">
         <input type="text" name="work" placeholder="ДОЛЖНОСТЬ">
         <textarea name="about" cols="30" rows="10" placeholder="ОБЯЗАННОСТИ"></textarea>
-        <button type="submit">отправить</button>
+        <button type="submit" name="klick">отправить</button>
     </form>
     <h2>Пользователи</h2>
     <ul>

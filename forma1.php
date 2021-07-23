@@ -1,10 +1,22 @@
 <?php 
 require 'db.php';
-$user = R::dispense("users");
-$user->firstname = $_POST["firstname"];
-$user->lastname = $_POST["lastname"];
-$user->age = $_POST["age"];
-$user->work = $_POST["work"];
-$user->about = $_POST["about"];
-R::store($user);
-header('Location: index.php');
+function sendForm($data){
+   
+    $user = R::dispense("users");
+    $user->firstname = $data["firstname"];
+    $user->lastname = $data["lastname"];
+    $user->age = $data["age"];
+    $user->work = $data["work"];
+    $user->about = $data["about"];
+    R::store($user);
+    echo "ok";
+   }
+  
+if($_POST["klick"]){
+       $forma=sendForm($_POST);
+       if($forma == "ok"){
+        header('Location: index.php');
+    }else{
+        echo "error";
+    }
+}
